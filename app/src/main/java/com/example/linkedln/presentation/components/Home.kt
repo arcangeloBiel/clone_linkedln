@@ -12,12 +12,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Home(
-    navController: NavHostController,
-) {
+fun Home() {
     var pesquisa by remember { mutableStateOf("") }
     Scaffold(
         topBar = {TopAppBarSample(onNameChange = {pesquisa = it})},
@@ -31,7 +30,8 @@ fun Home(
             }
         },
         bottomBar = {
-
+//            val navController = rememberNavController()
+//            BottomNavigation(navController = navController)
         }
     )
 }

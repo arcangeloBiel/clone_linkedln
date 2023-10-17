@@ -38,7 +38,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = "1.4.2"
     }
     packaging {
         resources {
@@ -57,6 +57,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+   implementation("androidx.compose.material:material:1.3.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.leanback:leanback:1.0.0")
     testImplementation("junit:junit:4.13.2")
@@ -83,5 +84,13 @@ dependencies {
     //Coil
     implementation ("io.coil-kt:coil-compose:2.4.0")
     implementation ("io.coil-kt:coil-svg:2.4.0")
+
+    //Exoplayer
+    implementation ("com.google.android.exoplayer:exoplayer:2.17.1")
+
+    //Accompanist
+    implementation ("com.google.accompanist:accompanist-insets:0.22.0-rc")
+    implementation ("com.google.accompanist:accompanist-pager:0.22.0-rc")
+//    implementation ("androidx.compose.compiler:compiler:1.5.31")
 
 }
