@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -15,9 +16,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.navigation.compose.rememberNavController
 import com.example.linkedln.navigation.NavigationGraph
 import com.example.linkedln.presentation.components.BottomNavigation
+import com.example.linkedln.presentation.components.Home
 import com.example.linkedln.ui.theme.LinkedlnTheme
 
 class MainActivity : ComponentActivity() {
@@ -28,7 +31,7 @@ class MainActivity : ComponentActivity() {
             LinkedlnTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colorScheme.background) {
-                   // NavigationGraph(navController = navController)
+                    // NavigationGraph(navController = navController)
                 }
                 MainScreenView()
             }
@@ -36,14 +39,25 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun MainScreenView(){
+fun MainScreenView() {
     val navController = rememberNavController()
     Scaffold(
-        bottomBar = { BottomNavigation(navController = navController) }
-    ) {
+        topBar = {
+            NavigationGraph(navController = navController)
+        },
+        content = { paddingValues ->
+            ConstraintLayout(
+                modifier = Modifier
+                    .padding(paddingValues)
 
-        NavigationGraph(navController = navController)
-    }
+            ) {
+              Home()
+            }
+        },
+        bottomBar = { BottomNavigation(navController = navController) },
+
+        )
 }
