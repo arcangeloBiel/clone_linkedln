@@ -6,7 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.linkedln.presentation.components.AddPostScreen
 import com.example.linkedln.presentation.components.BottomNavItem
-import com.example.linkedln.presentation.components.Home
+import com.example.linkedln.presentation.home.Home
 import com.example.linkedln.presentation.components.JobScreen
 import com.example.linkedln.presentation.components.NetworkScreen
 import com.example.linkedln.presentation.components.NotificationScreen

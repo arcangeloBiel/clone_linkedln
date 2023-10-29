@@ -1,4 +1,4 @@
-package com.example.linkedln.presentation.components
+package com.example.linkedln.presentation.home
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -21,6 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.example.linkedln.presentation.components.TopAppBarSample
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
