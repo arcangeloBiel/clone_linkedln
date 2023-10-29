@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -91,6 +92,9 @@ dependencies {
     //Accompanist
     implementation ("com.google.accompanist:accompanist-insets:0.22.0-rc")
     implementation ("com.google.accompanist:accompanist-pager:0.22.0-rc")
-//    implementation ("androidx.compose.compiler:compiler:1.5.31")
+
+    //firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.4.0"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
 
 }
