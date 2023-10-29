@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "826348559071",
-    "project_id": "linkedln-clone-76d15",
-    "storage_bucket": "linkedln-clone-76d15.appspot.com"
+    "project_number": "1079103706215",
+    "project_id": "linkedln-app",
+    "storage_bucket": "linkedln-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:826348559071:android:1e658cae1f9fc747ca676a",
+        "mobilesdk_app_id": "1:1079103706215:android:e74ff258ba24bdc0b9f0c2",
         "android_client_info": {
           "package_name": "com.example.linkedln"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCXsKJhLYxdkuiJFPaL772yZQrjn7lMECU"
+          "current_key": "AIzaSyASIEW-7zQpj_9NnVkQUsqgMNAdXWXMcBg"
         }
       ],
       "services": {
