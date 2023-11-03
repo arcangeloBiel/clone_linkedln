@@ -63,9 +63,7 @@ fun Home(
                     reverseLayout = true
                 ) {
                     items(messages) { message ->
-
-                          Text(text = message.nome_usuario.toString())
-                          Text(text = message.descricao.toString())
+                        DetailsHome()
 
                     }
                 }
@@ -76,31 +74,4 @@ fun Home(
     )
 }
 
-
-
-@OptIn(ExperimentalComposeUiApi::class, ExperimentalMaterial3Api::class)
-@Composable
-fun SearchBar(onSearch: Modifier) {
-    var text by remember { mutableStateOf("") }
-    val keyboardController = LocalSoftwareKeyboardController.current
-    val focusManager = LocalFocusManager.current
-
-
-    TextField(
-        value = text,
-        onValueChange = { text = it },
-        label = { Text("Search") },
-        leadingIcon = { Icon(Icons.Filled.Search, contentDescription = null) },
-        modifier = Modifier.fillMaxWidth(),
-        keyboardOptions = KeyboardOptions(imeAction = androidx.compose.ui.text.input.ImeAction.Search),
-        keyboardActions = KeyboardActions(onSearch = {
-           // onSearch(text)
-            // Hide the keyboard after submitting the search
-            keyboardController?.hide()
-            //or hide keyboard
-            focusManager.clearFocus()
-
-        })
-    )
-}
 
