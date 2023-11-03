@@ -14,13 +14,13 @@ import com.example.linkedln.ui.theme.LinkedlnTheme
 @Composable
 fun AppCard(
     modifier: Modifier = Modifier,
-    containerColor: Color = Color.White,
+    containerColor: Color = Color.Red,
     content: @Composable (ColumnScope.() -> Unit),
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = containerColor),
-        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
+       // elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
         content = content,
     )
 }
